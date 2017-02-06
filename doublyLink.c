@@ -50,13 +50,13 @@ int main(){
 	D->tail = NULL;
 	doublyLinked list = A;
 	list->head = NULL;
-	printf("�Ƨǫe");
+	printf("排序前");
 	printf("%3d%3d%3d%3d\n", list->data, (list->tail)->data, ((list->tail)->tail)->data, (((list->tail)->tail)->tail)->data);
 
 	doublyLinked temp = NULL;
 	sorting(list, &temp);
 	list = temp;
-	printf("�Ƨǫ�");
+	printf("排序後");
 	print(list);
 	printf("\n");
 
