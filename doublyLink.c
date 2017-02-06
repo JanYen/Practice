@@ -10,17 +10,17 @@ typedef struct node *doublyLinked;
 void print(doublyLinked ptr){
 	if(ptr){
 		print(ptr->head);
-	printf("%3d",ptr->data);
-	print(ptr->tail);
+		printf("%3d",ptr->data);
+		print(ptr->tail);
 	}
 }
 void sort(doublyLinked* list, doublyLinked node){ 
 	if(*list == NULL)
-	*list = node;
+		*list = node;
 	else if(node->data > (*list)->data)
-	sort(&((*list)->tail), node);
+		sort(&((*list)->tail), node);
 	else
-	sort(&((*list)->head), node);
+		sort(&((*list)->head), node);
 }
 void sorting(doublyLinked list, doublyLinked* temp){
 	doublyLinked node = (doublyLinked)malloc(sizeof(*node));
@@ -29,7 +29,7 @@ void sorting(doublyLinked list, doublyLinked* temp){
 	node->tail = NULL;
 	sort(temp, node);
 	if(list->tail)
-	sorting(list->tail, temp);
+		sorting(list->tail, temp);
 }
 int main(){
 	doublyLinked A = (doublyLinked)malloc(sizeof(*A));
